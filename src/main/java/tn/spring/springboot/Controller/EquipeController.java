@@ -12,36 +12,4 @@ public class EquipeController {
     IEquipeService iEquipeService;
 
 
-/*
-    // Save operation
-    @PostMapping("/save-equipe")
-    @ResponseBody
-    public Equipe addEtudiant(@RequestBody Equipe equipe)
-    {
-        Equipe e = iEquipeService.addEquipe(equipe);
-        return e;
-    }
-
-    @GetMapping("/retrieve-equipe/{idEquipe}")
-    @ResponseBody
-    public Equipe getEquipe(@PathVariable("idEquipe") Integer idEquipe)
-    {
-        return iEquipeService.retrieveEquipe(idEquipe);
-    }
-
-    @PutMapping("update-equipe")
-    @ResponseBody
-    public Equipe updateEquipe(@RequestBody Equipe equipe)
-    {
-        return iEquipeService.updateEquipe(equipe);
-    }
-
-
-    @GetMapping("/retrieve-all-equipes")
-    @ResponseBody
-
-    public List<Equipe> getequipes()
-    {
-        return iEquipeService.retrieveAllEquipes();
-    }*/
 }
