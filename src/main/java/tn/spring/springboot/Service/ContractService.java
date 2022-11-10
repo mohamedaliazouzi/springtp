@@ -21,17 +21,18 @@ public class ContractService implements IContractService {
 
     @Override
     public boolean deleteContract(int c) {
+        iContractRepository.deleteById(c);
         return false;
     }
 
     @Override
     public int addContract(Contrat c) {
-        return 0;
+        return iContractRepository.save(c).getIdEtudiant();
     }
 
     @Override
     public Contrat getContract(int contratc) {
-        return null;
+        return (Contrat) iContractRepository;
     }
 
     @Override

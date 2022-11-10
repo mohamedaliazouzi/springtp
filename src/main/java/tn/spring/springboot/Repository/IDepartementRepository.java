@@ -6,4 +6,5 @@ import tn.spring.springboot.Entity.Departement;
 
 @Repository
 public interface IDepartementRepository extends JpaRepository<Departement, Integer> {
+
 }
