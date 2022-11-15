@@ -14,7 +14,7 @@ public class EtudiantController {
 
 
 
-  /*  // Save operation
+  // Save operation
     @PostMapping("/save-etudiands")
     @ResponseBody
     public Etudiant addEtudiant(@RequestBody Etudiant etudiant)
@@ -52,5 +52,5 @@ public class EtudiantController {
     public List<Etudiant> getEtudiants()
     {
         return iEtudiantService.retrieveAllEtudiants();
-    }*/
+    }
 }
