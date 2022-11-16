@@ -38,8 +38,14 @@ public class ContratController {
     @ResponseBody
     public Contrat deleteContrat(@PathVariable("idContrat") Integer idContrat)
     {
-        iContractService.removeContrat(idContrat);
+        iContractService.deleteContract(idContrat);
         return null;
+    }
+    @PutMapping("/update-contract")
+    @ResponseBody
+    public boolean updateContract(@RequestBody Contrat contrat)
+    {
+        return iContractService.updateContract(contrat);
     }
 
 

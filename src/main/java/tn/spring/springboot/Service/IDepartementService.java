@@ -11,6 +11,7 @@ public interface IDepartementService {
     Departement addDepartement (Departement d);
 
     Departement updateDepartement (Departement d);
+    boolean deleteDepartement(int d ) ;
 
     Departement retrieveDepartement (Integer idDepart);
 }

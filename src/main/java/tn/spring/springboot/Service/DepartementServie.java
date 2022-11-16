@@ -27,6 +27,11 @@ public class DepartementServie implements IDepartementService {
     public Departement updateDepartement(Departement d) {
         return iDepartementRepository.save(d);
     }
+    @Override
+    public boolean deleteDepartement(int c) {
+        iDepartementRepository.deleteById(c);
+        return false;
+    }
 
     @Override
     public Departement retrieveDepartement(Integer idDepart) {

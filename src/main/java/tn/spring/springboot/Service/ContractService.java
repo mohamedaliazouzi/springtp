@@ -17,7 +17,12 @@ public class ContractService implements IContractService {
 
     @Override
     public boolean updateContract(Contrat c) {
-        return false;
+        if(iContractRepository.existsById(c.getIdContrat())) {
+            iContractRepository.save(c) ;
+            return true ;
+        }
+        else return false;
+
     }
 
     @Override
