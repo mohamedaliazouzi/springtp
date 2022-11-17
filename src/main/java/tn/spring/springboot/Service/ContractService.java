@@ -1,6 +1,7 @@
 package tn.spring.springboot.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import tn.spring.springboot.Entity.Contrat;
 import tn.spring.springboot.Repository.IContractRepository;
@@ -16,7 +17,12 @@ public class ContractService implements IContractService {
 
     @Override
     public boolean updateContract(Contrat c) {
-        return false;
+        if(iContractRepository.existsById(c.getIdContrat())) {
+            iContractRepository.save(c) ;
+            return true ;
+        }
+        else return false;
+
     }
 
     @Override

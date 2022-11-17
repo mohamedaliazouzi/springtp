@@ -22,7 +22,6 @@ public class ContratController {
     }
     @GetMapping("/retrieve-all-contrats")
     @ResponseBody
-
     public List<Contrat> getContrats()
     {
         List<Contrat> contratList=iContractService.retrieveAllContrats();
@@ -39,8 +38,14 @@ public class ContratController {
     @ResponseBody
     public Contrat deleteContrat(@PathVariable("idContrat") Integer idContrat)
     {
-        iContractService.removeContrat(idContrat);
+        iContractService.deleteContract(idContrat);
         return null;
+    }
+    @PutMapping("/update-contract")
+    @ResponseBody
+    public boolean updateContract(@RequestBody Contrat contrat)
+    {
+        return iContractService.updateContract(contrat);
     }
 
 

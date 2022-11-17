@@ -3,6 +3,7 @@ package tn.spring.springboot.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import tn.spring.springboot.Entity.Contrat;
 import tn.spring.springboot.Entity.Departement;
 import tn.spring.springboot.Service.IDepartementService;
 
@@ -45,5 +46,11 @@ public class DepartementController {
         return iDepartementService.retrieveAllDepartements();
     }
 
-
+    @DeleteMapping("/delete-departement/{idDepart}")
+    @ResponseBody
+    public Contrat deleteContrat(@PathVariable("idDepart") Integer idDepart)
+    {
+        iDepartementService.deleteDepartement(idDepart);
+        return null;
+    }
 }
