@@ -1,5 +1,6 @@
 package tn.spring.springboot.Controller;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tn.spring.springboot.Entity.Universite;
@@ -7,6 +8,8 @@ import tn.spring.springboot.Service.IUniversiteService;
 
 import java.util.List;
 @RestController
+@Tag(name = "Universite Crud")
+@RequestMapping("/Universite")
 public class UniversiteController {
     @Autowired
     IUniversiteService iUniversiteService;

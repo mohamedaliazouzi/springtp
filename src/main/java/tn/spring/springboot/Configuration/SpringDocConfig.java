@@ -24,16 +24,9 @@ public class SpringDocConfig {
     public Contact contactAPI() {
         Contact contact = new Contact().name("Equipe ASI II")
                 .email("mohamedali.azouzi@esprit.tn")
-                .url("https://www.linkedin.com/in/**********/");
+                .url("https://github.com/mohamedaliazouzi");
 
         return contact;
     }
-    @Bean
-    public GroupedOpenApi productPublicApi() {
-        return GroupedOpenApi.builder()
-                .group("Only Product Management API")
-                                .pathsToMatch("/product/**")
-                                .pathsToExclude("**")
-                                .build();
-    }
+   
 }
