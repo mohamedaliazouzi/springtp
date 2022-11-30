@@ -53,6 +53,19 @@ public class ContractService implements IContractService {
 
     }
 
+<<<<<<< Updated upstream
+=======
+    @Override
+    public Contrat affectContratToEtudiant(Contrat ce, String nomE, String prenomE) {
+        return null;
+    }
+
+   /* @Override
+    public Void retrieveContratOrderByUniversiteId() {
+        return (List<Contrat>) IContractRepository.;
+    }*/
+
+>>>>>>> Stashed changes
     @Override
     public Contrat getContract(int contratc) {
         return (Contrat) iContractRepository;
@@ -62,4 +75,5 @@ public class ContractService implements IContractService {
     public List<Contrat> getContract() {
         return null;
     }
+
 }
