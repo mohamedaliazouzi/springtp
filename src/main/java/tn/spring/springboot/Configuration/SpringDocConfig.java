@@ -28,5 +28,5 @@ public class SpringDocConfig {
 
         return contact;
     }
-   
+
 }

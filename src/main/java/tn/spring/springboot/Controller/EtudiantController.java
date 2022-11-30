@@ -18,7 +18,7 @@ public class EtudiantController {
 
 
   // Save operation
-    @PostMapping("/save-etudiands")
+    @PostMapping("/save-etudiant")
     @ResponseBody
     public Etudiant addEtudiant(@RequestBody Etudiant etudiant)
     {
@@ -41,7 +41,7 @@ public class EtudiantController {
         return null;
     }
 
-    @PutMapping("update-etudiant")
+    @PutMapping("/update-etudiant")
     @ResponseBody
     public Etudiant updateEtudiant(@RequestBody Etudiant etudiant)
     {
@@ -51,9 +51,21 @@ public class EtudiantController {
 
     @GetMapping("/retrieve-all-etudiants")
     @ResponseBody
-
     public List<Etudiant> getEtudiants()
     {
         return iEtudiantService.retrieveAllEtudiants();
+    }
+
+    @PutMapping("/assignetudianttodepartment/{idEtudiant}/{idDepart}")
+    public void assignEtudiantToDepartement (@PathVariable long idEtudiant, @PathVariable int idDepart){
+        iEtudiantService.assignEtudiantToDepartement(idEtudiant,idDepart);
+
+
+    }
+    @PostMapping("/addAndAssignEtudiantToEquipeAndContract/{idEquipe}/{idContrat}")
+    @ResponseBody
+    public Etudiant addAndAssignEtudiantToEquipeAndContract(@RequestBody Etudiant e,@PathVariable("idEquipe") Integer idEquipe ,@PathVariable("idContrat") Integer idContrat){
+        return iEtudiantService.addAndAssignEtudiantToEquipeAndContract(e,idEquipe,idContrat);
+
     }
 }

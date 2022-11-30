@@ -53,6 +53,11 @@ public class ContractService implements IContractService {
 
     }
 
+   /* @Override
+    public Void retrieveContratOrderByUniversiteId() {
+        return (List<Contrat>) IContractRepository.;
+    }*/
+
     @Override
     public Contrat getContract(int contratc) {
         return (Contrat) iContractRepository;

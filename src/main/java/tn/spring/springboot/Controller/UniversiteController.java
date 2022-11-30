@@ -40,10 +40,15 @@ public class UniversiteController {
 
     @GetMapping("/retrieve-all-universites")
     @ResponseBody
-
     public List<Universite> getUniversites()
     {
         return iUniversiteService.retrieveAllUniversites();
+    }
+
+    @PutMapping("/assignuniversitetodepartement/{idUniversite}/{idDepart}")
+    public void assignUniversiteToDepartement(@PathVariable int idUniversite , @PathVariable Integer idDepart){
+        iUniversiteService.assignUniversiteToDepartement(idUniversite,idDepart);
+
     }
 
 
