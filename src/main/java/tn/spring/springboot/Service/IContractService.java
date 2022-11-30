@@ -19,4 +19,5 @@ public interface IContractService {
     Contrat retrieveContrat(Integer idContrat);
 
     void removeContrat(Integer idContrat);
+    Contrat affectContratToEtudiant (Contrat ce,String nomE,String prenomE);
 }
